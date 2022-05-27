@@ -4,7 +4,9 @@
   "description": "contentful continuous integration &amp; continuous delivery test",
   "main": "index.js",
   "scripts": {
-   "delete": "node -v"
+    "create": "node migrations/create-content-type.js",
+    "delete": "node migrations/delete-content-type.js",
+    "edit": "node migrations/edit-content-type.js"
   },
   "repository": {
     "type": "git",
