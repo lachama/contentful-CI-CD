@@ -4,7 +4,7 @@ function migrationFunction(migration) {
   const store = migration.editContentType('storeInformation');
 
   store.editField('address')
-    .name('Store Address')
+    .name('Store Address 0')
     .type('Symbol')
     .required(false);
 
@@ -12,7 +12,6 @@ function migrationFunction(migration) {
     .name('Store Time Zone')
     .type('Symbol')
     .required(false);
-
 }
 
 const options = {

@@ -19,8 +19,8 @@ jobs:
     - name: Install deps
       run: npm install
 
-    - name: Run contentful migrations against QA env
-      run: npm run migrations
+    - name: Run contentful migrations Main
+      run: npm run delete && npm run create && npm run edit
       env:
         CONTENTFUL_MANAGEMENT_API: ${{ secrets.CONTENTFUL_MANAGEMENT_API }}
         CONTENTFUL_SPACE_ID: ${{ secrets.SPACEID }}
