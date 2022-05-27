@@ -7,8 +7,8 @@
     "create": "node migrations/create-content-type.js",
     "delete": "node migrations/delete-content-type.js",
     "edit": "node migrations/edit-content-type.js",
-    "export": "contentful space export --space-id 1fg1o2hf3ts7 --environment-id develop --content-file exported-file.json",
-    "import": "contentful space import --space-id 1fg1o2hf3ts7 --environment-id nonprod --content-file exported-file.json"
+    "export": "node migrations/export-by-content-type.js",
+    "import": "contentful space import --space-id 1fg1o2hf3ts7 --environment-id nonprod --content-file exported-data.json"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,13 @@
     "node-fetch": "^2.6.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "cli-table3": "^0.6.0",
+    "contentful-export": "^7.13.0",
+    "dotenv": "^16.0.1",
+    "lodash.startcase": "^4.4.0",
+    "querystring": "^0.2.1",
+    "yargs": "^16.2.0"
   },
   "devDependencies": {
     "eslint": "^7.21.0",

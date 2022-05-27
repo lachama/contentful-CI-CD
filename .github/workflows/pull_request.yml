@@ -19,9 +19,6 @@ jobs:
     - name: Run install contentful CLI
       run: npm install -g contentful-cli
     
-    - name: Run contentful Login
-      run: contentful login --management-token ${{ secrets.CONTENTFUL_MANAGEMENT_API }} -y
-
     - name: Install deps
       run: npm install    
 
@@ -31,7 +28,6 @@ jobs:
         CONTENTFUL_MANAGEMENT_API: ${{ secrets.CONTENTFUL_MANAGEMENT_API }}
         CONTENTFUL_SPACE_ID: ${{ secrets.SPACEID }}
         CONTENTFUL_ENVIRONMENT_ID: ${{ secrets.ENVIRONMENTID }}
-    
     
     - name: Run contentful develop to nonprod
       run: npm run export && npm run import
