@@ -69,7 +69,6 @@ const { argv } = yargs
   .option('content-types', {
     description: 'List of content types to filter by.',
     type: 'array',
-    default: ["storeInformation", "post", "version_tracking"],
   })
   .array('content-types')
   .require('content-types', 'Please provide at least one content type to filter by')

@@ -9,6 +9,80 @@
             "id": "1fg1o2hf3ts7"
           }
         },
+        "id": "versionTracking",
+        "type": "ContentType",
+        "createdAt": "2022-05-26T02:14:06.473Z",
+        "updatedAt": "2022-05-26T02:14:14.435Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-05-26T02:14:14.435Z",
+        "firstPublishedAt": "2022-05-26T02:14:14.435Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        }
+      },
+      "displayField": "version",
+      "name": "version_tracking",
+      "description": "",
+      "fields": [
+        {
+          "id": "version",
+          "name": "version",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            },
+            {
+              "regexp": {
+                "pattern": "^(?:(\\d+)\\.)?(?:(\\d+)\\.)?(\\*|\\d+)$",
+                "flags": null
+              },
+              "message": "Version Stuff"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
         "id": "post",
         "type": "ContentType",
         "createdAt": "2022-05-26T02:14:07.095Z",
@@ -102,7 +176,8 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -112,7 +187,8 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         }
@@ -175,7 +251,8 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -185,7 +262,8 @@
           "type": "Number",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -195,7 +273,8 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -205,7 +284,8 @@
           "type": "Number",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         },
@@ -215,14 +295,67 @@
           "type": "Symbol",
           "localized": false,
           "required": false,
-          "validations": [],
+          "validations": [
+          ],
           "disabled": false,
           "omitted": false
         }
       ]
     }
   ],
+  "tags": [
+  ],
   "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1fg1o2hf3ts7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2022-05-26T02:14:14.486Z",
+        "createdBy": {
+          "sys": {
+            "id": "0Pky6YBFwkFDkAlHfYlv7v",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-05-26T02:14:16.433Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0Pky6YBFwkFDkAlHfYlv7v",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "versionTracking",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "version",
+          "widgetId": "singleLine"
+        }
+      ]
+    },
     {
       "sys": {
         "id": "default",
@@ -351,5 +484,719 @@
       ]
     }
   ],
-  "entries": []
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "2SiSYthyVaasy84IssCQAw",
+        "type": "Entry",
+        "createdAt": "2022-05-26T02:15:41.006Z",
+        "updatedAt": "2022-05-26T02:15:45.810Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-05-26T02:15:45.810Z",
+        "firstPublishedAt": "2022-05-26T02:15:45.810Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hawkeye"
+        },
+        "slug": {
+          "en-US": "hawkeye"
+        },
+        "gif": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "NJXdJT7M4KgUcE4uS8KUC"
+            }
+          }
+        },
+        "first_appearance": {
+          "en-US": "Tales of Suspense #57 (Sept. 1964)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "5DZ6YtRSCIYoUSW2wq4ISI",
+        "type": "Entry",
+        "createdAt": "2022-05-26T02:15:41.013Z",
+        "updatedAt": "2022-05-26T02:15:56.460Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-05-26T02:15:56.460Z",
+        "firstPublishedAt": "2022-05-26T02:15:56.460Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Groot"
+        },
+        "slug": {
+          "en-US": "groot"
+        },
+        "gif": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4jjPeB1eFGMAEeoiiAMqiQ"
+            }
+          }
+        },
+        "first_appearance": {
+          "en-US": "Tales to Astonish #13 (November 1960)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "18iKSQj9YUo6iGc42A6kSS",
+        "type": "Entry",
+        "createdAt": "2022-05-26T02:15:42.080Z",
+        "updatedAt": "2022-05-26T02:15:58.181Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-05-26T02:15:58.181Z",
+        "firstPublishedAt": "2022-05-26T02:15:58.181Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "versionTracking"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "0.0.7"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "3G84ulTwjCMcQWQoCgm4G4",
+        "type": "Entry",
+        "createdAt": "2022-05-26T02:15:43.522Z",
+        "updatedAt": "2022-05-26T02:15:46.871Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-05-26T02:15:46.871Z",
+        "firstPublishedAt": "2022-05-26T02:15:46.871Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Thor"
+        },
+        "slug": {
+          "en-US": "thor"
+        },
+        "gif": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3caPL1qzVYSGyAC8A8KQEK"
+            }
+          }
+        },
+        "first_appearance": {
+          "en-US": "Journey into Mystery #83 (August 1962)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "33PogRALNYkYE4e2iumAiU",
+        "type": "Entry",
+        "createdAt": "2022-05-26T02:15:43.529Z",
+        "updatedAt": "2022-05-26T02:15:56.009Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-05-26T02:15:56.009Z",
+        "firstPublishedAt": "2022-05-26T02:15:56.009Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Black Panther"
+        },
+        "slug": {
+          "en-US": "black-panther"
+        },
+        "gif": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4TRRH6jH6wmAccw488yaOW"
+            }
+          }
+        },
+        "first_appearance": {
+          "en-US": "Fantastic Four #52 (July 1966)"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "3caPL1qzVYSGyAC8A8KQEK",
+        "type": "Asset",
+        "createdAt": "2022-05-26T02:14:16.831Z",
+        "updatedAt": "2022-05-26T02:15:24.474Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-05-26T02:15:24.474Z",
+        "firstPublishedAt": "2022-05-26T02:15:24.474Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "thor"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1fg1o2hf3ts7/3caPL1qzVYSGyAC8A8KQEK/89068cecf2c03efe4a272297d489a307/thor.gif",
+            "details": {
+              "size": 6914461,
+              "image": {
+                "width": 400,
+                "height": 400
+              }
+            },
+            "fileName": "thor.gif",
+            "contentType": "image/gif"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "4jjPeB1eFGMAEeoiiAMqiQ",
+        "type": "Asset",
+        "createdAt": "2022-05-26T02:14:16.848Z",
+        "updatedAt": "2022-05-26T02:15:19.921Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-05-26T02:15:19.921Z",
+        "firstPublishedAt": "2022-05-26T02:15:19.921Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "groot"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1fg1o2hf3ts7/4jjPeB1eFGMAEeoiiAMqiQ/ba0ac8e2cff6d59ddc16fb6547d13310/groot.gif",
+            "details": {
+              "size": 1938238,
+              "image": {
+                "width": 500,
+                "height": 500
+              }
+            },
+            "fileName": "groot.gif",
+            "contentType": "image/gif"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "NJXdJT7M4KgUcE4uS8KUC",
+        "type": "Asset",
+        "createdAt": "2022-05-26T02:14:16.891Z",
+        "updatedAt": "2022-05-26T02:15:02.239Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-05-26T02:15:02.239Z",
+        "firstPublishedAt": "2022-05-26T02:15:02.239Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "hawkeye"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1fg1o2hf3ts7/NJXdJT7M4KgUcE4uS8KUC/7667cbb23371d017a6e5bf7066958470/hawkeye.gif",
+            "details": {
+              "size": 997007,
+              "image": {
+                "width": 500,
+                "height": 260
+              }
+            },
+            "fileName": "hawkeye.gif",
+            "contentType": "image/gif"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "4TRRH6jH6wmAccw488yaOW",
+        "type": "Asset",
+        "createdAt": "2022-05-26T02:14:17.009Z",
+        "updatedAt": "2022-05-26T02:15:07.122Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2022-05-26T02:15:07.122Z",
+        "firstPublishedAt": "2022-05-26T02:15:07.122Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "black panther"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/1fg1o2hf3ts7/4TRRH6jH6wmAccw488yaOW/f344a99fb2aa34e87c525603fccb2d1f/black_panther.gif",
+            "details": {
+              "size": 4711930,
+              "image": {
+                "width": 600,
+                "height": 600
+              }
+            },
+            "fileName": "black panther.gif",
+            "contentType": "image/gif"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "50DdkdDG3MHMm61LGuaGPS",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "develop",
+            "uuid": "f09dd419-49ea-4013-8be5-9753c657f3f4"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "createdAt": "2022-05-27T00:42:38Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedAt": "2022-05-27T00:42:38Z"
+      }
+    }
+  ]
 }

@@ -7,7 +7,7 @@
     "create": "node migrations/create-content-type.js",
     "delete": "node migrations/delete-content-type.js",
     "edit": "node migrations/edit-content-type.js",
-    "export": "node migrations/export-by-content-type.js",
+    "export": "node migrations/export.js",
     "import": "node migrations/import.js"
   },
   "repository": {
