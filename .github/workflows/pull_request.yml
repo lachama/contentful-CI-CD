@@ -19,13 +19,17 @@ jobs:
     - name: Install deps
       run: npm install
     
-    - name: Run contentful migrations Main
+    - name: Run contentful migration
       run: npm run create && npm run edit
       env:
         CONTENTFUL_MANAGEMENT_API: ${{ secrets.CONTENTFUL_MANAGEMENT_API }}
         CONTENTFUL_SPACE_ID: ${{ secrets.SPACEID }}
-        CONTENTFUL_ENVIRONMENT_ID: ${{ secrets.ENVIRONMENTID }}
 
+    - name: Run contentful develop to nonprod
+      run: npm run export && npm run import
+      env:
+        CONTENTFUL_MANAGEMENT_API: ${{ secrets.CONTENTFUL_MANAGEMENT_API }}
+        CONTENTFUL_SPACE_ID: ${{ secrets.SPACEID }}
 
     - name: Create commit comment
       uses: peter-evans/commit-comment@v1

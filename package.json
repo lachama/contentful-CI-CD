@@ -6,7 +6,9 @@
   "scripts": {
     "create": "node migrations/create-content-type.js",
     "delete": "node migrations/delete-content-type.js",
-    "edit": "node migrations/edit-content-type.js"
+    "edit": "node migrations/edit-content-type.js",
+    "export": "contentful space export --space-id 1fg1o2hf3ts7 --environment-id develop --content-file exported-file.json",
+    "import": "contentful space import --space-id 1fg1o2hf3ts7 --environment-id nonprod --content-file exported-file.json"
   },
   "repository": {
     "type": "git",
