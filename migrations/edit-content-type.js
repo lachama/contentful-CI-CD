@@ -4,7 +4,7 @@ function migrationFunction(migration) {
   const store = migration.editContentType('storeInformation');
 
   store.editField('address')
-    .name('Address')
+    .name('Store Address Edited')
     .type('Symbol')
     .required(false);
 

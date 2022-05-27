@@ -46,6 +46,80 @@
 
       console.log("availableMigrations", availableMigrations);
 
+      // ---------------------------------------------------------------------------
+      console.log("Figure out latest ran migration of the contentful space");
+      const { items: versions } = await environment.getEntries({
+          content_type: "versionTracking",
+      });
+
+      if (!versions.length || versions.length > 1) {
+          throw new Error("There should only be one entry of type 'versionTracking'");
+      }
+
+      let storedVersionEntry = versions[0];
+      const currentVersionString = storedVersionEntry.fields.version[defaultLocale];
+
+      // ---------------------------------------------------------------------------
+      console.log("Evaluate which migrations to run");
+      const currentMigrationIndex = availableMigrations.indexOf(currentVersionString);
+
+      if (currentMigrationIndex === -1) {
+          throw new Error(
+              `Version ${currentVersionString} is not matching with any known migration`
+          );
+      }
+      const migrationsToRun = availableMigrations.slice(currentMigrationIndex + 1);
+      const migrationOptions = {
+          spaceId: SPACE_ID,
+          environmentId: ENVIRONMENT_ID,
+          accessToken: CMA_ACCESS_TOKEN,
+          yes: true,
+      };
+
+      // ---------------------------------------------------------------------------
+      console.log("Run migrations and update version entry");
+      while ((migrationToRun = migrationsToRun.shift())) {
+          const filePath = path.join(
+              __dirname,
+              "..",
+              "migrations",
+              getFileOfVersion(migrationToRun)
+          );
+          console.log(`Running ${filePath}`);
+          await runMigration(
+              Object.assign(migrationOptions, {
+                  filePath,
+              })
+          );
+          console.log(`${migrationToRun} succeeded`);
+
+          storedVersionEntry.fields.version[defaultLocale] = migrationToRun;
+          storedVersionEntry = await storedVersionEntry.update();
+          storedVersionEntry = await storedVersionEntry.publish();
+
+          console.log(`Updated version entry to ${migrationToRun}`);
+      }
+
+      // ---------------------------------------------------------------------------
+      console.log("Checking if we need to an alias");
+      if (ENVIRONMENT_INPUT == "master" || ENVIRONMENT_INPUT == "staging" || ENVIRONMENT_INPUT == "qa") {
+          console.log(`Running on ${ENVIRONMENT_INPUT}.`);
+          console.log(`Updating ${ENVIRONMENT_INPUT} alias.`);
+          await space
+              .getEnvironmentAlias(ENVIRONMENT_INPUT)
+              .then((alias) => {
+                  alias.environment.sys.id = ENVIRONMENT_ID;
+                  return alias.update();
+              })
+              .then((alias) => console.log(`alias ${alias.sys.id} updated.`))
+              .catch(console.error);
+          console.log(`${ENVIRONMENT_INPUT} alias updated.`);
+      } else {
+          console.log("Running on feature branch");
+          console.log("No alias changes required");
+      }
+
+      console.log("All done!");
      
   } catch (e) {
       console.error(e);
