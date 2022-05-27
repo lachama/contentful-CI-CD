@@ -1,0 +1,355 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "post",
+        "type": "ContentType",
+        "createdAt": "2022-05-26T02:14:07.095Z",
+        "updatedAt": "2022-05-26T02:14:07.675Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2022-05-26T02:14:07.675Z",
+        "firstPublishedAt": "2022-05-26T02:14:07.675Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "post",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "gif",
+          "name": "gif",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "first_appearance",
+          "name": "First Appearance of the character",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "author",
+          "name": "author",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "1fg1o2hf3ts7"
+          }
+        },
+        "id": "storeInformation",
+        "type": "ContentType",
+        "createdAt": "2022-05-27T06:36:01.387Z",
+        "updatedAt": "2022-05-27T06:38:16.644Z",
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2022-05-27T06:38:16.644Z",
+        "firstPublishedAt": "2022-05-27T06:36:01.682Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0Pky6YBFwkFDkAlHfYlv7v"
+          }
+        }
+      },
+      "displayField": null,
+      "name": "Store Information",
+      "description": "Store Information Data",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "storeID",
+          "name": "Store ID",
+          "type": "Number",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "address",
+          "name": "Store Address 0",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "phoneNumber",
+          "name": "Phone Number",
+          "type": "Number",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "timeZone",
+          "name": "Store Time Zone",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1fg1o2hf3ts7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2022-05-26T02:14:07.737Z",
+        "createdBy": {
+          "sys": {
+            "id": "0Pky6YBFwkFDkAlHfYlv7v",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-05-26T02:14:15.329Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0Pky6YBFwkFDkAlHfYlv7v",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "post",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor"
+        },
+        {
+          "fieldId": "gif",
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "first_appearance",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "author",
+          "widgetId": "singleLine"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "1fg1o2hf3ts7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2022-05-27T06:36:01.742Z",
+        "createdBy": {
+          "sys": {
+            "id": "0Pky6YBFwkFDkAlHfYlv7v",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2022-05-27T06:38:16.862Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0Pky6YBFwkFDkAlHfYlv7v",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "storeInformation",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "develop",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name"
+        },
+        {
+          "fieldId": "storeID"
+        },
+        {
+          "fieldId": "address"
+        },
+        {
+          "fieldId": "phoneNumber"
+        },
+        {
+          "fieldId": "timeZone"
+        }
+      ]
+    }
+  ],
+  "entries": []
+}

@@ -8,7 +8,7 @@
     "delete": "node migrations/delete-content-type.js",
     "edit": "node migrations/edit-content-type.js",
     "export": "node migrations/export-by-content-type.js",
-    "import": "contentful space import --space-id 1fg1o2hf3ts7 --environment-id nonprod --content-file exported-data.json"
+    "import": "node migrations/import.js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "yargs": "^16.2.0"
   },
   "devDependencies": {
+    "contentful-import": "^8.3.0",
     "eslint": "^7.21.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.1.0",
