@@ -19,6 +19,12 @@ jobs:
     - name: Install deps
       run: npm install
 
+    - name: Ruta
+      run: pwd
+    
+    - name: Contenidos Carpeta
+      run: ls
+    
     - name: Run contentful migrations Main
       run: npm run delete -y
       env:
