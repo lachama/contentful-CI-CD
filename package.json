@@ -1,0 +1,43 @@
+{
+  "name": "contentful-ci-cd",
+  "version": "1.0.0",
+  "description": "contentful continuous integration &amp; continuous delivery test",
+  "main": "index.js",
+  "scripts": {
+    "create": "node migrations/create-content-type.js",
+    "delete": "node migrations/delete-content-type.js",
+    "edit": "node migrations/edit-content-type.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lachama/contentful-CI-CD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@contentful/app-sdk": "4.3.7",
+    "@contentful/f36-components": "4.8.0",
+    "@contentful/f36-tokens": "4.0.1",
+    "@contentful/react-apps-toolkit": "1.0.5",
+    "contentful-cli": "^1.9.0",
+    "contentful-management": "10.3.0",
+    "contentful-migration": "^4.9.0",
+    "emotion": "10.0.27",
+    "mkdirp": "^1.0.4",
+    "node-fetch": "^2.6.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.2.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "fetch-mock-jest": "^1.5.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1"
+  }
+}
