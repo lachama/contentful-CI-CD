@@ -17,20 +17,24 @@ jobs:
         node-version: '14.x'
 
     - name: Install deps
-      run: npm install
+      run: npm install    
 
-    - name: Run contentful migrations against QA env
-      run: npm run migrations
+    - name: Run contentful migration
+      run: npm run edit
+      env:
+        CONTENTFUL_MANAGEMENT_API: ${{ secrets.CONTENTFUL_MANAGEMENT_API }}
+        CONTENTFUL_SPACE_ID: ${{ secrets.SPACEID }}
+        CONTENTFUL_ENVIRONMENT_ID: ${{ secrets.ENVIRONMENTID }}
+    
+    - name: Run contentful develop to nonprod
+      run: npm run export && npm run import
       env:
         CONTENTFUL_MANAGEMENT_API: ${{ secrets.CONTENTFUL_MANAGEMENT_API }}
         CONTENTFUL_SPACE_ID: ${{ secrets.SPACEID }}
         CONTENTFUL_ENVIRONMENT_ID: ${{ secrets.ENVIRONMENTID }}
 
-
     - name: Create commit comment
       uses: peter-evans/commit-comment@v1
       with:
         body: |
-          See changes to the [${{steps.migrate.outputs.environment_name }} ][1] Environment on Contentful.
-
-          [1]: ${{steps.migrate.outputs.environment_url}}
+          See changes made in nonprod Environment on Contentful.
