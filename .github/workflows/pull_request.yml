@@ -16,8 +16,11 @@ jobs:
       with:
         node-version: '14.x'
 
+    - name: Run install contentful CLI
+      run: npm install -g contentful-cli
+
     - name: Install deps
-      run: npm install
+      run: npm install    
     
     - name: Run contentful Login
       run: contentful login --management-token ${{ secrets.CONTENTFUL_MANAGEMENT_API }}
