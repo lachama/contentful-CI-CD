@@ -20,7 +20,7 @@ jobs:
       run: npm install    
 
     - name: Run contentful migration
-      run: npm run create && npm run edit
+      run: npm run edit
       env:
         CONTENTFUL_MANAGEMENT_API: ${{ secrets.CONTENTFUL_MANAGEMENT_API }}
         CONTENTFUL_SPACE_ID: ${{ secrets.SPACEID }}
